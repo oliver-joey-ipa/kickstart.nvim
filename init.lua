@@ -596,7 +596,6 @@ require('lazy').setup({
         },
         ruff = {},
         eslint = {},
-        prettier = {},
         --
 
         lua_ls = {
