@@ -911,6 +911,7 @@ require('lazy').setup({
   -- { import = 'custom.plugins' },
   require 'custom.plugins.session',
   require 'custom.plugins.grug',
+  require 'custom.plugins.markdown-preview',
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
