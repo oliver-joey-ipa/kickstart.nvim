@@ -284,6 +284,9 @@ require('lazy').setup({
       -- Document existing key chains
       require('which-key').add {
         { '<leader>c', group = '[C]ode' },
+        { '<leader>co', desc = '[C]hoose ours' },
+        { '<leader>ct', desc = '[C]hoose theirs' },
+        { '<leader>cb', desc = '[C]hoose both' },
         { '<leader>d', group = '[D]ocument' },
         { '<leader>r', group = '[R]ename' },
         { '<leader>s', group = '[S]earch' },
@@ -291,6 +294,9 @@ require('lazy').setup({
         { '<leader>t', group = '[T]oggle' },
         { '<leader>b', group = '[B]uffer' },
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
+        { '<leader>x', group = 'E[x]plore Trouble' },
+        { '<leader>]x', group = 'previous conflict' },
+        { '<leader>[x', group = 'next conflict' },
       }
     end,
   },
@@ -817,7 +823,8 @@ require('lazy').setup({
       vim.cmd.hi 'Comment gui=none'
     end,
   },
-
+  { 'akinsho/git-conflict.nvim', version = '*', keys = { { '<leader>gm', '<cmd>GitConflictListQf<cr>', desc = 'Git Merge list' } }, config = true },
+  { 'yorickpeterse/nvim-pqf', version = '*', config = true },
   -- Highlight todo, notes, etc in comments
   {
     'folke/todo-comments.nvim',
