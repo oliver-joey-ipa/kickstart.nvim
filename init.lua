@@ -890,43 +890,6 @@ require('lazy').setup({
     dependencies = { 'nvim-lua/plenary.nvim' },
     opts = { signs = false },
   },
-  {
-    'folke/trouble.nvim',
-    opts = {}, -- for default options, refer to the configuration section for custom setup.
-    cmd = 'Trouble',
-    keys = {
-      {
-        '<leader>xx',
-        '<cmd>Trouble diagnostics toggle<cr>',
-        desc = 'Diagnostics (Trouble)',
-      },
-      {
-        '<leader>xX',
-        '<cmd>Trouble diagnostics toggle filter.buf=0<cr>',
-        desc = 'Buffer Diagnostics (Trouble)',
-      },
-      {
-        '<leader>cs',
-        '<cmd>Trouble symbols toggle focus=false<cr>',
-        desc = 'Symbols (Trouble)',
-      },
-      {
-        '<leader>cl',
-        '<cmd>Trouble lsp toggle focus=false win.position=right<cr>',
-        desc = 'LSP Definitions / references / ... (Trouble)',
-      },
-      {
-        '<leader>xL',
-        '<cmd>Trouble loclist toggle<cr>',
-        desc = 'Location List (Trouble)',
-      },
-      {
-        '<leader>xQ',
-        '<cmd>Trouble qflist toggle<cr>',
-        desc = 'Quickfix List (Trouble)',
-      },
-    },
-  },
   { -- Collection of various small independent plugins/modules
     'echasnovski/mini.nvim',
     config = function()
@@ -1015,6 +978,8 @@ require('lazy').setup({
   require 'custom.plugins.grug',
   require 'custom.plugins.markdown-preview',
   require 'custom.plugins.fugitive',
+  require 'custom.plugins.git-conflict',
+  require 'custom.plugins.trouble',
   --
   -- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
   -- Or use telescope!
