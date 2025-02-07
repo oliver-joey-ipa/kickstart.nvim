@@ -880,8 +880,7 @@ require('lazy').setup({
       vim.cmd.hi 'Comment gui=none'
     end,
   },
-  { 'akinsho/git-conflict.nvim', version = '*', keys = { { '<leader>gm', '<cmd>GitConflictListQf<cr>', desc = 'Git Merge list' } }, config = true },
-  { 'yorickpeterse/nvim-pqf', version = '*', config = true },
+  { 'yorickpeterse/nvim-pqf', version = '*', config = true, lazy = false },
   -- Highlight todo, notes, etc in comments
   {
     'folke/todo-comments.nvim',
