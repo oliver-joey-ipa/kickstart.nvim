@@ -154,10 +154,12 @@ vim.opt.inccommand = 'split'
 -- Show which line your cursor is on
 vim.opt.cursorline = true
 
+vim.o.tabstop = 4 -- A TAB character looks like 4 spaces
+vim.o.shiftwidth = 4 -- A TAB character looks like 4 spaces
+
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
-vim.o.tabstop = 2 -- A TAB character looks like 4 spaces
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
