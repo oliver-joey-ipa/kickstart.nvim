@@ -630,14 +630,7 @@ require('lazy').setup({
       --  - capabilities (table): Override fields in capabilities. Can be used to disable certain LSP features.
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
-      require('lspconfig').oxlint.setup {}
-      require('lspconfig').tailwindcss.setup {
-        settings = {
-          tailwindCSS = {
-            classFunctions = { 'cva', 'cx' },
-          },
-        },
-      }
+      vim.lsp.enable 'oxlint'
       local servers = {
         -- clangd = {},
         -- gopls = {},
@@ -663,6 +656,13 @@ require('lazy').setup({
         },
         ruff = {},
         eslint = {},
+        tailwindcss = {
+          settings = {
+            tailwindCSS = {
+              classFunctions = { 'cva', 'cx' },
+            },
+          },
+        },
         lua_ls = {
           -- cmd = { ... },
           -- filetypes = { ... },
@@ -747,6 +747,10 @@ require('lazy').setup({
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
+        javascript = { 'eslint', 'oxlint' },
+        typescript = { 'eslint', 'oxlint' },
+        javascriptreact = { 'eslint', 'oxlint' },
+        typescriptreact = { 'eslint', 'oxlint' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
