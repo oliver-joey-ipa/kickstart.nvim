@@ -475,7 +475,6 @@ require('lazy').setup({
       -- NOTE: `opts = {}` is the same as calling `require('mason').setup({})`
       { 'mason-org/mason.nvim', opts = {} },
       'mason-org/mason-lspconfig.nvim',
-      'WhoIsSethDaniel/mason-tool-installer.nvim',
 
       -- Useful status updates for LSP.
       { 'j-hui/fidget.nvim', opts = {} },
@@ -1047,6 +1046,11 @@ require('lazy').setup({
     --    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
     --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
   },
+  {
+    'MeanderingProgrammer/render-markdown.nvim',
+    dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim', 'nvim-tree/nvim-web-devicons' },
+    opts = {},
+  },
 
   -- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
@@ -1071,7 +1075,6 @@ require('lazy').setup({
   -- { import = 'custom.plugins' },
   require 'custom.plugins.session',
   require 'custom.plugins.grug',
-  require 'custom.plugins.markdown-preview',
   require 'custom.plugins.fugitive',
   require 'custom.plugins.git-conflict',
   require 'custom.plugins.trouble',
