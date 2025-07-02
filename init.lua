@@ -737,8 +737,7 @@ require('lazy').setup({
         typescript = { 'eslint', 'oxlint' },
         javascriptreact = { 'eslint', 'oxlint' },
         typescriptreact = { 'eslint', 'oxlint' },
-        -- Conform can also run multiple formatters sequentially
-        python = { 'pyright', 'ruff' },
+        python = { 'ruff_fix', 'ruff_format' },
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
         -- javascript = { "prettierd", "prettier", stop_after_first = true },
