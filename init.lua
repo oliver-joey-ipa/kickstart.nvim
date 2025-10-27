@@ -688,6 +688,7 @@ require('lazy').setup({
             'vtsls',
             'mdformat',
             'markdownlint',
+            'prettierd',
             'pyright',
             'ruff',
             'eslint',
@@ -733,10 +734,10 @@ require('lazy').setup({
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
-        javascript = { 'eslint', 'oxlint' },
-        typescript = { 'eslint', 'oxlint' },
-        javascriptreact = { 'eslint', 'oxlint' },
-        typescriptreact = { 'eslint', 'oxlint' },
+        javascript = { 'prettierd', 'eslint', 'oxlint' },
+        typescript = { 'prettierd', 'eslint', 'oxlint' },
+        javascriptreact = { 'prettierd', 'eslint', 'oxlint' },
+        typescriptreact = { 'prettierd', 'eslint', 'oxlint' },
         python = { 'ruff_fix', 'ruff_format' },
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
@@ -1026,7 +1027,7 @@ require('lazy').setup({
     main = 'nvim-treesitter.configs', -- Sets main module to use for opts
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
     opts = {
-      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' },
+      ensure_installed = { 'bash', 'c', 'diff', 'dockerfile', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' },
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {
