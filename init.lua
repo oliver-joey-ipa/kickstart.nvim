@@ -668,16 +668,7 @@ require('lazy').setup({
       vim.lsp.config('markdownlint', {})
       vim.lsp.enable 'ruff'
       vim.lsp.enable 'eslint'
-      vim.lsp.enable 'pyright'
-      vim.lsp.config('pyright', {
-        settings = {
-          python = {
-            analysis = {
-              useLibraryCodeForTypes = false,
-            },
-          },
-        },
-      })
+      vim.lsp.enable 'pyrefly'
       vim.lsp.enable 'tailwindcss'
       vim.lsp.config('tailwindcss', {
         settings = {
