@@ -705,7 +705,7 @@ require('lazy').setup({
             'mdformat',
             'markdownlint',
             'prettier',
-            'pyright',
+            'pyrefly',
             'ruff',
             'eslint',
             'tailwindcss',
@@ -754,6 +754,7 @@ require('lazy').setup({
         typescript = { 'prettier' },
         javascriptreact = { 'prettier' },
         typescriptreact = { 'prettier' },
+        json = { 'prettier' },
         python = { 'ruff_fix', 'ruff_format' },
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
