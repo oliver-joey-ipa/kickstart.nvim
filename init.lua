@@ -986,8 +986,8 @@ require('lazy').setup({
   require 'custom.plugins.fugitive',
   require 'custom.plugins.git-conflict',
   require 'custom.plugins.trouble',
-  require 'custom.plugins.uv',
-  -- require 'custom.plugins.llm',
+  require 'custom.plugins.llm',
+
   --
   -- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
   -- Or use telescope!
