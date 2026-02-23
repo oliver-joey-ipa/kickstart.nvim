@@ -688,7 +688,7 @@ require('lazy').setup({
           },
         },
       })
-      vim.lsp.enable 'uv
+      vim.lsp.enable 'uv'
 
       require('mason-lspconfig').setup {
         opts = {
