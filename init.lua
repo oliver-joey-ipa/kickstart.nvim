@@ -659,24 +659,8 @@ require('lazy').setup({
         },
       }
 
-      vim.lsp.enable 'gopls'
-      vim.lsp.enable 'oxlint'
-      vim.lsp.enable 'vtsls'
-      vim.lsp.enable 'mdformat'
-      vim.lsp.config('mdformat', {})
-      vim.lsp.enable 'markdownlint'
-      vim.lsp.config('markdownlint', {})
-      vim.lsp.enable 'ruff'
       vim.lsp.enable 'eslint'
-      vim.lsp.enable 'pyrefly'
-      vim.lsp.enable 'tailwindcss'
-      vim.lsp.config('tailwindcss', {
-        settings = {
-          tailwindCSS = {
-            classFunctions = { 'cva', 'cx' },
-          },
-        },
-      })
+      vim.lsp.enable 'gopls'
       vim.lsp.enable 'lua_ls'
       vim.lsp.config('lua_ls', {
         settings = {
@@ -687,21 +671,41 @@ require('lazy').setup({
           },
         },
       })
+      vim.lsp.enable 'markdownlint'
+      vim.lsp.config('markdownlint', {})
+      vim.lsp.enable 'mdformat'
+      vim.lsp.config('mdformat', {})
+      vim.lsp.enable 'oxlint'
+      vim.lsp.enable 'oxfmt'
+      vim.lsp.enable 'ruff'
+      vim.lsp.enable 'tsgo'
+      vim.lsp.enable 'ty'
+      vim.lsp.enable 'tailwindcss'
+      vim.lsp.config('tailwindcss', {
+        settings = {
+          tailwindCSS = {
+            classFunctions = { 'cva', 'cx' },
+          },
+        },
+      })
+      vim.lsp.enable 'uv
+
       require('mason-lspconfig').setup {
         opts = {
           ensure_installed = {
+            'eslint',
             'gopls',
-            'oxlint',
-            'vtsls',
+            'lua_ls',
             'mdformat',
             'markdownlint',
-            'prettier',
-            'pyrefly',
+            'oxfmt',
+            'oxlint',
             'ruff',
-            'eslint',
-            'tailwindcss',
-            'lua_ls',
             'stylua',
+            'tsgo',
+            'ty',
+            'tailwindcss',
+            'uv',
           },
         },
         automatic_installation = false,
