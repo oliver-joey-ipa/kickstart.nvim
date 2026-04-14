@@ -1,7 +1,9 @@
 return {
   'folke/todo-comments.nvim',
   event = 'VimEnter',
-  keys = { { '<leader>xt', '<cmd>TodoQuickFix<cr>', desc = 'Todo (Quickfix)' } },
   dependencies = { 'nvim-lua/plenary.nvim' },
+  ---@module 'todo-comments'
+  ---@type TodoOptions
+  ---@diagnostic disable-next-line: missing-fields
   opts = { signs = false },
 }
