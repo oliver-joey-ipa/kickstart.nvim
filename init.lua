@@ -1021,7 +1021,6 @@ require('lazy').setup({
         },
       }
 
-      vim.lsp.enable 'eslint'
       vim.lsp.enable 'gopls'
       vim.lsp.enable 'lua_ls'
       vim.lsp.config('lua_ls', {
@@ -1040,7 +1039,7 @@ require('lazy').setup({
       vim.lsp.enable 'oxlint'
       vim.lsp.enable 'oxfmt'
       vim.lsp.enable 'ruff'
-      vim.lsp.enable 'tsgo'
+      vim.lsp.enable 'tsc'
       vim.lsp.enable 'ty'
       vim.lsp.enable 'tailwindcss'
       vim.lsp.config('tailwindcss', {
